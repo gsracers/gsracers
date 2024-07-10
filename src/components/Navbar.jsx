@@ -46,11 +46,12 @@ function Navbar() {
   // }
 
   return (
-    <div>
+    <div className=" bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_10%_50%,rgba(120,119,198,0.15),rgba(255,255,255,0))] 
+       w-full h-full text-white">
      
       {/* --------------------------------------------------nav bar------------------------------------- */}
       <div className="nav-bar h-36  w-full  px-1/6 ">
-        <div className=" out-container w-10/12 mx-auto flex justify-between items-center h-full">
+        <div className=" out-container w-11/12 mx-auto flex justify-between items-center h-full">
           <div className="logo-container max-h-28   max-w-28  p-1">
             <img src={LOGO} alt="LOGO" className="bg-" />
           </div>
@@ -65,6 +66,8 @@ function Navbar() {
               hambuger
             </button>
           </div >
+
+         
           <div className="menu-container  lg:inline hidden rounded-3xl px-2  backdrop-blur-3xl  ">
             <ul className=" flex  flex-1 justify-between text-2xl  capitalize   racing-sans-one-regular p-1 px-3">
               <li className="px-4 menu-item hover:text-blue-600  text-blue-300   duration-300">
