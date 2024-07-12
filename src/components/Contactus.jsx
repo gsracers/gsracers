@@ -3,9 +3,10 @@ import React from 'react';
 export default function Contactus() {
   return (
     <footer
-      className=" text-center lg:text-left overflow-hidden">
+      className=" text-center lg:text-left overflow-hidden 
+       w-full h-full text-white roboto-regular ">
       <div
-        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
@@ -175,7 +176,7 @@ export default function Contactus() {
         <span>Designed by:   </span>
         <a
           className="font-semibold  "
-          href="https://tw-elements.com/"
+         
         > TANAY NAGDE</a>
       </div>
     </footer>

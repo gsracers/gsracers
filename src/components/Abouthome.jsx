@@ -2,6 +2,7 @@ import image from "../assets/hero2.png";
 import { motion } from "framer-motion";
 function Abouthome() {
   return (
+    <div className="out-container w-10/12 mx-auto">
     <div className="lg:pt-40 py-10 aboutus-home">
       <div className="">
         <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular">
@@ -45,6 +46,7 @@ function Abouthome() {
 
 
       </div>
+    </div>
     </div>
   );
 }
