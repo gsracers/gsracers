@@ -4,6 +4,7 @@ import data from "../utils/data";
 import Abouthome from "./Abouthome";
 import "../index.css";
 import Sliderone from "./Sliderone";
+import Contactform from './Contactform';
 
 
 import Glowcard from "./Glowcard";
@@ -22,10 +23,8 @@ function Home() {
       
       <Hero />
       <Abouthome />
-
-    
       <Sliderone />
-      
+      <Contactform/>   
       </div>
      
 
