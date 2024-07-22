@@ -42,13 +42,13 @@ function Hero() {
     // Hero Section
 
     <div className="herosection  py-10 bg-blue-950/10 rounded-2xl grid lg:grid-cols-2 lg:h-[75vh] grid-cols-1 gap-8 md:gap-1 lg:justify-items-center w-full overflow-hidden">
-      <div className="hero-right w-full h-full   justify-items-center md:order-1 content-center gap-3 grid grid-cols-1 p-2 ">
-        <div className="pb-1 lg:  font-trinos">
+      <div className="hero-right w-full h-full justify-items-center content-center gap-3 grid grid-cols-1 p-2 ">
+        <div className="p-2 w-full  font-trinos">
           <motion.h1
             animate={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="gradient-text text-transparent text-4xl py-2 animate-gradienthero lg:text-7xl "
+            className="gradient-text text-transparent text-4xl py-2 animate-gradienthero xl:text-7xl "
           >
             TEAM
           </motion.h1>
@@ -57,7 +57,7 @@ function Hero() {
             animate={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="gradient-text text-transparent text-3xl animate-gradienthero  lg:text-6xl "
+            className="gradient-text text-transparent text-3xl md:text-4xl animate-gradienthero lg:text-5xl 2xl:text-6xl "
           >
             G.S.RACERS
           </motion.h1>

@@ -78,7 +78,7 @@ export default function Contactus() {
       </div>
 
       {/* <!-- Main container div: holds the entire content of the footer, including four sections . --> */}
-      <div className="mx-6 py-10 text-center md:text-left flex items-center  justify-center w-full">
+      <div className="py-10 text-center md:text-left flex items-center  justify-center w-full">
          <div className="grid-1 grid gap-8 md:grid-cols-2 justify-center items-center place-items-center content-center overflow-clip lg:grid-cols-3">
        
                 <div className="">
@@ -104,8 +104,8 @@ export default function Contactus() {
                 </p>
           </div>
           {/* <!-- Useful links section --> */}
-          <div className="overflow-hidden flex justify-center items-center p-8">
-          <iframe className='p' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.234249142937!2d75.8721087!3d22.7260646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd6b4053ad39%3A0xf90eb6c96b39715e!2sTEAM%20GSRacers!5e0!3m2!1sen!2sin!4v1720414139683!5m2!1sen!2sin" width="400" height="350"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>  
+          <div className="overflow-hidden flex justify-center items-center ">
+          <iframe className='p' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.234249142937!2d75.8721087!3d22.7260646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd6b4053ad39%3A0xf90eb6c96b39715e!2sTEAM%20GSRacers!5e0!3m2!1sen!2sin!4v1720414139683!5m2!1sen!2sin" width="350" height="350"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>  
           </div>
           {/* <!-- Contact section --> */}
           <div className=''>

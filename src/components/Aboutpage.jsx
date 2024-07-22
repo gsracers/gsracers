@@ -7,8 +7,8 @@ import 'react-vertical-timeline-component/style.min.css';
 function Aboutpage() {
   return (
     <>
-      <div className="py-10 px-4 w-full h-full roboto-regular ">
-        <div className=" bg-blue-950/10 rounded-2xl w-full overflow-hidden">
+      <div className="py-10 w-full h-full roboto-regular ">
+        <div className=" w-full overflow-hidden">
           <div className="w-11/12 mx-auto">
             <div className="w-full">
               <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular">
@@ -27,148 +27,66 @@ function Aboutpage() {
                 repudiandae? Officiis autem beatae eius optio quaerat labore
                 amet atque eaque saepe doloribus quos, inventore qui aliquam eum
                 illo nobis, sed ab. Totam suscipit est dignissimos commodi
-                culpa, dicta magni ipsa asperiores delectus nulla veritatis
+                culpa, dicta magni ipsa asperiores delectus nulla veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ad voluptatem illum fuga doloribus ratione fugiat doloremque quaerat? Totam laudantium, culpa architecto, vitae perspiciatis hic animi, nesciunt quo maiores ut molestiae blanditiis quam eveniet soluta perferendis porro sed nisi! Explicabo dolorem commodi porro odio autem numquam sequi, non accusamus at blanditiis dicta asperiores, aliquam enim quos error, laudantium natus totam dignissimos dolor earum sunt assumenda saepe. Delectus facilis, laboriosam magnam cum veritatis inventore nam dolores temporibus eveniet at eos dolorum eaque similique deserunt, ad id dolor voluptas neque. Quae quidem laboriosam et eos quia iusto fugit a reiciendis, aliquid, maxime ab. Beatae, quas sapiente. Aspernatur nesciunt, dolore atque nisi rerum maxime assumenda voluptatibus accusantium quo tenetur soluta provident, tempore ad omnis totam esse laborum culpa corrupti! Veniam voluptatibus necessitatibus rem, cupiditate pariatur modi quos fuga amet quia nisi veritatis omnis, mollitia sint praesentium magnam, nihil asperiores! Illo laboriosam, minima magni accusantium odit quidem ut aliquam neque
               </p>
             </div>
-            <div>
-            <VerticalTimeline lineColor = '#1E3A8A'>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
+            
+            
+            <div className=" bg-blue-950/10 rounded-2xl my-10 flex gap-3 px-4 py-10">
+                 <div className="flex justify-between w-[30rem] h-72 bg-blue-800/10 p-2 items-center">
+                 <div className="grid grid-cols-1">
+                       <h1 className="text-2xl py-1 capitalize">
+                         heading
+                       </h1>
+                       <ul>
+                         <li>l1</li>
+                         <li>l2</li>
+                         <li>l3 lore</li>
+                       </ul>
+        
+                         </div>
+                     <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-40 w-40 p-3 ">
+                       <img src={images} alt="" className=" " />
+                     </div>
+                 </div>
 
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
+                 <div className="flex justify-between w-[30rem] h-72 bg-blue-800/10 p-2 items-center">
+                 <div className="grid grid-cols-1">
+                       <h1 className="text-2xl py-1 capitalize">
+                         heading
+                       </h1>
+                       <ul>
+                         <li>l1</li>
+                         <li>l2</li>
+                         <li>l3 lore</li>
+                       </ul>
+        
+                         </div>
+                     <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-40 w-40 p-3 ">
+                       <img src={images} alt="" className=" " />
+                     </div>
+                 </div>
 
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement  iconStyle={{background:" #93C5FD"}} contentStyle={{ background: 'rgb(19,25,46)', color: '#fff' }} >
-  <div className="card w-full h-40 items-center p-2 flex justify-between rounded-2xl">
-                <div className="grid grid-cols-1">
-                  <h1 className="text-2xl py-1 capitalize">
-                    heading
-                  </h1>
-                  <ul>
-                    <li>l1</li>
-                    <li>l2</li>
-                    <li>l3</li>
-                  </ul>
-
-                </div>
-                <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-28 w-28 p-3 ">
-                  <img src={images} alt="" className=" " />
-                </div>
-
-              </div>
-  </VerticalTimelineElement>
-            </VerticalTimeline> 
-
+                 <div className="flex justify-between w-[30rem] h-72 bg-blue-800/10 p-2 items-center">
+                 <div className="grid grid-cols-1">
+                       <h1 className="text-2xl py-1 capitalize">
+                         heading
+                       </h1>
+                       <ul>
+                         <li>l1</li>
+                         <li>l2</li>
+                         <li>l3 lore</li>
+                       </ul>
+        
+                         </div>
+                     <div className="rounded-full bg-white overflow-hidden flex justify-center items-center h-40 w-40 p-3 ">
+                       <img src={images} alt="" className=" " />
+                     </div>
+                 </div>
+                 
+                    </div> 
               
-            </div>
+           
           </div>
         </div>
       </div>
