@@ -1,8 +1,7 @@
 import React from "react";
 import images from "../assets/logo-1.png";
 import "../index.css"
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+
 
 function Aboutpage() {
   return (
