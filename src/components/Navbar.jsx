@@ -2,7 +2,9 @@ import React from "react";
 import { useState } from "react";
 import LOGO from "../assets/logo-1.png";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
+console.log("tanay");
 const Hamburgercomponent = () => {
   return (
     <motion.div
@@ -12,10 +14,10 @@ const Hamburgercomponent = () => {
       exit={{ y: -100, opacity: 0 }}
       className="h-full   w-full"
     >
-      <ul className="grid justify-items-center grid-cols-1 racing-sans-one-regular text-2xl gap-1 border-6">
-        <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
+      <ul className="grid justify-items-center grid-cols-1 font-proracing text-2xl gap-1 border-6">
+       <Link to = "/aboutus"> <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
           About us
-        </li>
+        </li></Link>
         <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
           Home
         </li>
@@ -61,10 +63,10 @@ function Navbar() {
           </div>
 
           <div className="menu-container  lg:inline hidden rounded-3xl px-2  backdrop-blur-3xl  ">
-            <ul className=" flex  flex-1 justify-between text-2xl  capitalize   racing-sans-one-regular p-1 px-3">
-              <li className="px-4 menu-item hover:text-blue-600  text-blue-300   duration-300">
+            <ul className=" flex  flex-1 justify-between   capitalize   font-proracing text-2xl p-1 px-3">
+            <Link to = "/aboutus"> <li className="px-4 menu-item hover:text-blue-600  text-blue-300   duration-300">
                 About us
-              </li>
+              </li> </Link>
               <li className="px-4 menu-item hover:text-blue-600  text-blue-300 duration-300">
                 Home
               </li>

@@ -5,7 +5,7 @@ function Abouthome() {
     <div className="out-container w-10/12 mx-auto">
     <div className="lg:pt-40 py-10 aboutus-home">
       <div className="">
-        <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular">
+        <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center font-proracing">
           ABOUT US
         </h1>
         <hr className="bg-blue-900  md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
@@ -24,7 +24,7 @@ function Abouthome() {
         className="grid grid-cols-1 gap-12 justify-items-center  ">
         <div className=" absolute md:h-96 md:w-[28rem]  w-60 h-52  bg-blue-800 blur-xl"></div>
         <img src={image} alt="" className=" hover:scale-105 ease-in-out duration-500 md:h-96 md:w-[28rem]  w-60 h-52 rounded-xl  z-10" />
-           <div><h1 className="text-4xl py-1 text-blue-300 text-center capitalize   racing-sans-one-regular ">our legacy</h1>
+           <div><h1 className="text-4xl py-1 text-blue-300 text-center capitalize font-proracing ">our legacy</h1>
            <p className="text-center mx-auto w-3/4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium culpa voluptatibus accusamus natus ex recusandae at deserunt assumenda molestias quibusdam</p></div> 
 
         </motion.div>
@@ -39,7 +39,7 @@ function Abouthome() {
             </div>
            
            <div className="" >
-           <h1 className="text-4xl py-1 text-blue-300 text-center capitalize   racing-sans-one-regular">our teams</h1>
+           <h1 className="text-4xl py-1 text-blue-300 text-center capitalize font-proracing">our teams</h1>
             <p className="text-center mx-auto w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium culpa voluptatibus accusamus natus ex recusandae at deserunt assumenda molestias quibusdam</p>
             </div>  
         </motion.div >

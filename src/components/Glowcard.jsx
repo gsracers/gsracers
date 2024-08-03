@@ -4,7 +4,7 @@ import "../index.css";
 function Glowcard(props) {
   return (
     <div className="h-80 w-full md:w-80 grid grid-cols-1 rounded-lg
-      items-center justify-items-center  bg-blue-800/10 gap-2">
+      items-center justify-items-center  bg-blue-800/10 gap-2 hover:scale-105 ease-in-out duration-300">
         <div className="image-container h-40 w-40 ">
             <img src={props.img} alt={props.title} />
         </div> 

@@ -33,6 +33,14 @@
       src: url("./utils/fonts/trinos-solid-font/TrinosStencil-2OywW.ttf" ) format("truetype");
     }
   
+    @font-face {
+      font-family: "draco";
+      src: url("./utils/fonts/Draco.otf" ) format("OpenType");
+    }
+    @font-face {
+      font-family: "proracing";
+      src: url("./utils/fonts/ProRacingSlant.otf" ) format("OpenType");
+    }
   .gradient{
     background: linear-gradient(
   to right,
@@ -117,4 +125,14 @@
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
+  }
+
+  .MyGradient {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
   }

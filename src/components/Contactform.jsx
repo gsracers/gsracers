@@ -7,7 +7,7 @@ function Contactform() {
     <>
       <div className=" ">
         <div className="my-20 mx-auto">
-            <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular " > sponsorship</h1>
+            <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center font-proracing " > sponsorship</h1>
             <hr className="bg-blue-900  md:w-1/5 w-1/2 mx-auto border-none my-3 h-1" />
         </div>    
             <div className="grid md:grid-cols-5 grid-cols-1  bg-blue-950/10">

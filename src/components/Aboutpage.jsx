@@ -4,17 +4,59 @@ import "../index.css";
 import { motion } from "framer-motion";
 import Marqueecard from "./Marqueecard";
 
+// Static image imports
+import image1 from '../assets/evolution/g1/g1_1.jpg';
+import image2 from '../assets/evolution/g2/g2_1.jpg';
+import image3 from '../assets/evolution/g3/g3_1.jpg';
+import image4 from '../assets/evolution/g4/g4_1.jpg';
+import image5 from '../assets/evolution/g5/g5_1.jpg';
+import image6 from '../assets/evolution/g6/g6_1.jpg';
+import image7 from '../assets/evolution/g7/g7_1.jpg';
+import image8 from '../assets/evolution/g8/g8_1.jpg';
+import image9 from '../assets/evolution/g9/g9_1.jpg';
+import image10 from '../assets/evolution/g10/g10_1.jpg';
+import image11 from '../assets/evolution/g11/g11_1.jpg';
+import image12 from '../assets/evolution/g12/g12_1.jpg';
+import image13 from '../assets/evolution/g13/g13_1.jpg';
+import image14 from '../assets/evolution/g14/g14_1.jpg';
+import image15 from '../assets/evolution/g15/g15_1.jpg';
+import image16 from '../assets/evolution/g16/g16_1.jpg';
+import image17 from '../assets/evolution/g17/g17_1.jpg';
+import image18 from '../assets/evolution/g18/g18_1.jpg';
+
+// Store imported images in an array
+const imagePaths = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+  image18,
+];
+
 function Aboutpage() {
   return (
     <>
       <div className="py-10 w-full h-full roboto-regular ">
-        <div className=" w-full overflow-hidden">
+        <div className="w-full overflow-hidden">
           <div className="w-11/12 mx-auto">
             <div className="w-full">
               <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular">
                 ABOUT US
               </h1>
-              <hr className="bg-blue-900  md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
+              <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
               <p className="text-left">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Praesentium, at voluptatem? Ullam similique sequi beatae vitae
@@ -51,49 +93,40 @@ function Aboutpage() {
               </p>
             </div>
 
-            <div className=" bg-blue-950/10 rounded-2xl my-10  px-4 py-10  overflow-x-hidden">
-              <div className="flex w-[2vw] my-4  ">
-                <motion.div
-                  initial={{ x: 0 }}
-                  animate={{ x: "-150%" }}
+            <div className="bg-blue-950/10 rounded-2xl my-10 px-4 py-10 overflow-x-hidden MyGradient">
+              <div className="flex gap-10 ">
+              <motion.div
+                  initial={{ x: 0  }}
+                  animate={{ x: '-100%' }}
                   transition={{
-                    duration: 25,
+                    duration: 40,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: 'linear',
                   }}
-                  className="flex "
+                  className="flex items-center flex-shrink-0  gap-10"
                 >
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
+                  {imagePaths.map((src, index) => (
+                     
+                    <img key={index} src={src} alt={`img-${index}`} className="h-52 w-96 hover:scale-105 ease-in-out duration-300" />
+                  ))}
                 </motion.div>
-                {/* made this copy for infinite scroll as it will restart from initial card  */}
+                {/* made this copy for infinite scroll as it will restart from initial card */}
                 <motion.div
-                  initial={{ x: 0 }}
-                  animate={{ x: "-150%" }}
+                  initial={{ x: 0  }}
+                  animate={{ x: '-100%' }}
                   transition={{
-                    duration: 25,
+                    duration: 40,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: 'linear',
                   }}
-                  className="flex  "
+                  className="flex items-center flex-shrink-0 gap-10"
                 >
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
-                  <Marqueecard />
+                  {imagePaths.map((src, index) => (
+                     
+                    <img key={index} src={src} alt={`img-${index}`} className="h-52 w-96 hover:scale-105 ease-in-out duration-300" />
+                  ))}
                 </motion.div>
               </div>
-
             </div>
           </div>
         </div>

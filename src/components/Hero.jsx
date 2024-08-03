@@ -1,7 +1,7 @@
 import React from "react";
 import HERO_IMG_PATH from "../assets/hero2.png";
 import { motion } from "framer-motion";
-import Slider from "react-slick";
+import herovideo from "../assets/07222-1.mp4"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -41,7 +41,7 @@ function Hero() {
   return (
     // Hero Section
 
-    <div className="herosection  py-10 bg-blue-950/10 rounded-2xl grid lg:grid-cols-2 lg:h-[75vh] grid-cols-1 gap-8 md:gap-1 lg:justify-items-center w-full overflow-hidden">
+    <div className="herosection  py-10 bg-blue-950/10 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  w-full overflow-hidden">
       <div className="hero-right w-full h-full justify-items-center content-center gap-3 grid grid-cols-1 p-2 ">
         <div className="p-2 w-full  font-trinos">
           <motion.h1
@@ -78,17 +78,21 @@ function Hero() {
           </motion.p>
         </div>
       </div>
-      <div className="hero-left rounded-lg  md:order-2 w-full h-full flex justify-center items-center object-cover justify-items-center content-center p-2 xl:pl-10 ">
+      <div className="hero-left rounded-lg overflow-hidden   md:order-2 w-full h-full  justify-items-center content-center p-2 ">
         <motion.div
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: 100, opacity: 0 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="  w-full h-full  overflow-hidden"
+          className="  w-full h overflow-hidden flex justify-center items-center object-cover"
         >
-          <Slider {...settings}>
-            <img src={HERO_IMG_PATH} alt="HERO" className=" rounded-2xl  md:w-[40rem] px-2 md:h-[32rem] " />
-            <img src={HERO_IMG_PATH} alt="HERO" className=" rounded-2xl  md:w-[40rem] px-2 md:h-[32rem] " />
-          </Slider>
+             <video
+            autoPlay
+            loop
+            muted
+            className="  w-full object-cover"
+          >
+            <source src={herovideo} type="video/mp4" />
+          </video>
         </motion.div>
       </div>
     </div>

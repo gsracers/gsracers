@@ -1,3 +1,5 @@
+import { DragControls } from 'framer-motion';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -18,6 +20,9 @@ export default {
 
         fontFamily: {
           trinos: ["trinossolid", "sans-serif"],
+          draco: ["draco" ,"sans-serif" ],
+          proracing: ["proracing" ,"sans-serif" ]
+
 
         },  
       },
