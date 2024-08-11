@@ -41,7 +41,7 @@ function Hero() {
   return (
     // Hero Section
 
-    <div className="herosection  py-10 bg-blue-950/10 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  w-full overflow-hidden">
+    <div className="herosection my-10 py-10 bg-blue-950/10 rounded-2xl flex items-center flex-wrap lg:flex-nowrap   w-full overflow-hidden">
       <div className="hero-right w-full h-full justify-items-center content-center gap-3 grid grid-cols-1 p-2 ">
         <div className="p-2 w-full  font-trinos">
           <motion.h1
@@ -78,18 +78,18 @@ function Hero() {
           </motion.p>
         </div>
       </div>
-      <div className="hero-left rounded-lg overflow-hidden   md:order-2 w-full h-full  justify-items-center content-center p-2 ">
+      <div className="hero-left rounded-lg overflow-hidden   md:order-2 w-full h-full  justify-items-center content-center p- ">
         <motion.div
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: 100, opacity: 0 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="  w-full h overflow-hidden flex justify-center items-center object-cover"
+          className="  w-full  overflow-hidden flex justify-center items-center object-cover"
         >
              <video
             autoPlay
             loop
             muted
-            className="  w-full object-cover"
+            className="  w-full "
           >
             <source src={herovideo} type="video/mp4" />
           </video>

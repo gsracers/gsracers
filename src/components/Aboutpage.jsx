@@ -3,26 +3,28 @@ import images from "../assets/logo-1.png";
 import "../index.css";
 import { motion } from "framer-motion";
 import Marqueecard from "./Marqueecard";
+import img1 from "../assets/img2.jpg";
+import img2 from "../assets/img3.jpg";
 
 // Static image imports
-import image1 from '../assets/evolution/g1/g1_1.jpg';
-import image2 from '../assets/evolution/g2/g2_1.jpg';
-import image3 from '../assets/evolution/g3/g3_1.jpg';
-import image4 from '../assets/evolution/g4/g4_1.jpg';
-import image5 from '../assets/evolution/g5/g5_1.jpg';
-import image6 from '../assets/evolution/g6/g6_1.jpg';
-import image7 from '../assets/evolution/g7/g7_1.jpg';
-import image8 from '../assets/evolution/g8/g8_1.jpg';
-import image9 from '../assets/evolution/g9/g9_1.jpg';
-import image10 from '../assets/evolution/g10/g10_1.jpg';
-import image11 from '../assets/evolution/g11/g11_1.jpg';
-import image12 from '../assets/evolution/g12/g12_1.jpg';
-import image13 from '../assets/evolution/g13/g13_1.jpg';
-import image14 from '../assets/evolution/g14/g14_1.jpg';
-import image15 from '../assets/evolution/g15/g15_1.jpg';
-import image16 from '../assets/evolution/g16/g16_1.jpg';
-import image17 from '../assets/evolution/g17/g17_1.jpg';
-import image18 from '../assets/evolution/g18/g18_1.jpg';
+import image1 from "../assets/evolution/g1/g1_1.jpg";
+import image2 from "../assets/evolution/g2/g2_1.jpg";
+import image3 from "../assets/evolution/g3/g3_1.jpg";
+import image4 from "../assets/evolution/g4/g4_1.jpg";
+import image5 from "../assets/evolution/g5/g5_1.jpg";
+import image6 from "../assets/evolution/g6/g6_1.jpg";
+import image7 from "../assets/evolution/g7/g7_1.jpg";
+import image8 from "../assets/evolution/g8/g8_1.jpg";
+import image9 from "../assets/evolution/g9/g9_1.jpg";
+import image10 from "../assets/evolution/g10/g10_1.jpg";
+import image11 from "../assets/evolution/g11/g11_1.jpg";
+import image12 from "../assets/evolution/g12/g12_1.jpg";
+import image13 from "../assets/evolution/g13/g13_1.jpg";
+import image14 from "../assets/evolution/g14/g14_1.jpg";
+import image15 from "../assets/evolution/g15/g15_1.jpg";
+import image16 from "../assets/evolution/g16/g16_1.jpg";
+import image17 from "../assets/evolution/g17/g17_1.jpg";
+import image18 from "../assets/evolution/g18/g18_1.jpg";
 
 // Store imported images in an array
 const imagePaths = [
@@ -53,77 +55,105 @@ function Aboutpage() {
         <div className="w-full overflow-hidden">
           <div className="w-11/12 mx-auto">
             <div className="w-full">
-              <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center racing-sans-one-regular">
+              <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">
                 ABOUT US
               </h1>
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
-              <p className="text-left">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Praesentium, at voluptatem? Ullam similique sequi beatae vitae
-                quas, atque nobis, obcaecati incidunt laboriosam facere maxime
-                temporibus hic rem molestias odio possimus, laudantium expedita.
-                Id libero eum delectus atque quam nihil consequuntur aliquam
-                officia, itaque molestias recusandae eaque quo iure amet
-                voluptatum. Natus quia velit, incidunt nulla ipsum ad adipisci
-                quod! Consequatur nisi nihil reprehenderit reiciendis maiores
-                repudiandae? Officiis autem beatae eius optio quaerat labore
-                amet atque eaque saepe doloribus quos, inventore qui aliquam eum
-                illo nobis, sed ab. Totam suscipit est dignissimos commodi
-                culpa, dicta magni ipsa asperiores delectus nulla veritatis
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt, ad voluptatem illum fuga doloribus ratione fugiat
-                doloremque quaerat? Totam laudantium, culpa architecto, vitae
-                perspiciatis hic animi, nesciunt quo maiores ut molestiae
-                blanditiis quam eveniet soluta perferendis porro sed nisi!
-                Explicabo dolorem commodi porro odio autem numquam sequi, non
-                accusamus at blanditiis dicta asperiores, aliquam enim quos
-                error, laudantium natus totam dignissimos dolor earum sunt
-                assumenda saepe. Delectus facilis, laboriosam magnam cum
-                veritatis inventore nam dolores temporibus eveniet at eos
-                dolorum eaque similique deserunt, ad id dolor voluptas neque.
-                Quae quidem laboriosam et eos quia iusto fugit a reiciendis,
-                aliquid, maxime ab. Beatae, quas sapiente. Aspernatur nesciunt,
-                dolore atque nisi rerum maxime assumenda voluptatibus
-                accusantium quo tenetur soluta provident, tempore ad omnis totam
-                esse laborum culpa corrupti! Veniam voluptatibus necessitatibus
-                rem, cupiditate pariatur modi quos fuga amet quia nisi veritatis
-                omnis, mollitia sint praesentium magnam, nihil asperiores! Illo
-                laboriosam, minima magni accusantium odit quidem ut aliquam
-                neque
-              </p>
+              <div className="py-10 flex flex-col gap-10">
+                  <motion.div     animate={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: 0.5, duration: 1 }} className="gsracers bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img lg:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
+                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 justify-center ">
+                      <h1 className="text-2xl capitalize font-bold font-proracing">GS RACERS</h1>
+                      <p className="text-lg font-semibold text-justify" >Team GSRacers, founded in 2007 at SGSITS College, is a passion-driven team with a rich history of excellence in automotive engineering. Specializing in creating physical vehicles, particularly ATVs. Over the years, GSRacers has participated in more than 17 national-level events, and an international event , consistently showcasing their dedication, innovation, and technical prowess. Our hard work and commitment were rewarded in 2014 when we secured All India Rank 1, a significant milestone in our journey. The team has a long-standing tradition of competing in M-BAJA, having been a part of this prestigious event for 17 consecutive years. Embracing new technologies and expanding their horizons, GSRacers ventured into the electrical segment last year. Demonstrating their versatility and innovative spirit, they successfully developed two vehicles from different segments, highlighting our ability to adapt and excel in a rapidly evolving field.</p>
+                    </div>
+                    
+
+                  </motion.div>
+
+                  <motion.div     animate={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: 1, duration: 0.5 }} className="sgsits my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img lg:w-2/5 w-full p-2 lg:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
+                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 ">
+                      <h1 className="text-2xl capitalize font-bold font-proracing">SGSITS</h1>
+                      <p className="text-lg font-semibold text-justify" >Shri Govindram Seksaria Institute of Technology and Science (SGSITS) in Indore, established in 1952, has solidified its position as a premier institution in Madhya Pradesh and the western region. Recognized for its academic excellence, SGSITS has consistently ranked among India's top engineering colleges, including IITs and NITs. Granted autonomous status by AICTE and UGC in 1989, the institute continues to be affiliated with the Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal.</p>
+                    </div>
+                    
+
+                  </motion.div>
+
+                  <motion.div     animate={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: 1.5, duration: 0.5 }} className="gsracers my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img lg:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
+                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 \ ">
+                      <h1 className="text-2xl capitalize font-bold font-proracing">BAJA SAE</h1>
+                      <p className="text-lg font-semibold text-justify" >BAJA SAE INDIA is an inter-collegiate competition in which students from various universities compete to design and build an All Terrain Vehicle. Since it’s introduction, BAJA has grown into one of the biggest and most prestigious engineering event in INDIA in which over 200 teams compete against each other to build the fastest, lightest, most rugged and affordable off-road vehicle.</p>
+                    </div>
+                    
+
+                  </motion.div>
+                  <motion.div     animate={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: 2, duration: 0.5 }} className="sgsits my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img lg:w-2/5 w-full p-2 lg:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
+                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 ">
+                      <h1 className="text-2xl capitalize font-bold font-proracing">SGSITS</h1>
+                      <p className="text-lg font-semibold text-justify" >Shri Govindram Seksaria Institute of Technology and Science (SGSITS) in Indore, established in 1952, has solidified its position as a premier institution in Madhya Pradesh and the western region. Recognized for its academic excellence, SGSITS has consistently ranked among India's top engineering colleges, including IITs and NITs. Granted autonomous status by AICTE and UGC in 1989, the institute continues to be affiliated with the Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal.</p>
+                    </div>
+                    
+
+                  </motion.div>
+              </div>
             </div>
 
-            <div className="bg-blue-950/10 rounded-2xl my-10 px-4 py-10 overflow-x-hidden MyGradient">
+            <div className="bg-blue-950/10 rounded-2xl my-10 px-4 py-10 overflow-x-hidden lg:MyGradient">
+            <div className="my-10"><h1 className="md:text-4xl  text-2xl text-blue-300  font-bold text-center font-proracing">
+              our Evolution
+              </h1>
+              <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
+              </div>
+         
               <div className="flex gap-10 ">
-              <motion.div
-                  initial={{ x: 0  }}
-                  animate={{ x: '-100%' }}
+                <motion.div
+                  initial={{ x: 0 }}
+                  animate={{ x: "-100%" }}
                   transition={{
                     duration: 40,
                     repeat: Infinity,
-                    ease: 'linear',
+                    ease: "linear",
                   }}
                   className="flex items-center flex-shrink-0  gap-10"
                 >
                   {imagePaths.map((src, index) => (
-                     
-                    <img key={index} src={src} alt={`img-${index}`} className="h-52 w-96 hover:scale-105 ease-in-out duration-300" />
+                    <img
+                      key={index}
+                      src={src}
+                      alt={`img-${index}`}
+                      className="h-52 w-96 hover:scale-105 ease-in-out duration-300"
+                    />
                   ))}
                 </motion.div>
                 {/* made this copy for infinite scroll as it will restart from initial card */}
                 <motion.div
-                  initial={{ x: 0  }}
-                  animate={{ x: '-100%' }}
+                  initial={{ x: 0 }}
+                  animate={{ x: "-100%" }}
                   transition={{
                     duration: 40,
                     repeat: Infinity,
-                    ease: 'linear',
+                    ease: "linear",
                   }}
                   className="flex items-center flex-shrink-0 gap-10"
                 >
                   {imagePaths.map((src, index) => (
-                     
-                    <img key={index} src={src} alt={`img-${index}`} className="h-52 w-96 hover:scale-105 ease-in-out duration-300" />
+                    <img
+                      key={index}
+                      src={src}
+                      alt={`img-${index}`}
+                      className="h-52 w-96 hover:scale-105 ease-in-out duration-300"
+                    />
                   ))}
                 </motion.div>
               </div>

@@ -63,7 +63,7 @@ function Navbar() {
           </div>
 
           <div className="menu-container  lg:inline hidden rounded-3xl px-2  backdrop-blur-3xl  ">
-            <ul className=" flex  flex-1 justify-between   capitalize   font-proracing text-2xl p-1 px-3">
+            <ul className=" flex  flex-1 justify-between   capitalize cursor-pointer font-extrabold font-proracing text-2xl p-1 px-3">
             <Link to = "/aboutus"> <li className="px-4 menu-item hover:text-blue-600  text-blue-300   duration-300">
                 About us
               </li> </Link>

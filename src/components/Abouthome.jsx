@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Abouthome() {
   return (
     <div className="out-container w-10/12 mx-auto">
-    <div className="lg:pt-40 py-10 aboutus-home">
+    <div className="lg:pt-32 py-10 aboutus-home">
       <div className="">
         <h1 className="md:text-6xl text-4xl text-blue-300 font-bold text-center font-proracing">
           ABOUT US
