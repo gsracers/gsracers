@@ -3,7 +3,7 @@ import HERO_IMG_PATH from "../assets/hero2.png";
 import data from "../utils/data";
 import Abouthome from "./Abouthome";
 import "../index.css";
-import Sliderone from "./Sliderone";
+import Acheivement from "./Acheivement";
 import Contactform from './Contactform';
 
 
@@ -23,7 +23,7 @@ function Home() {
       
       <Hero />
       <Abouthome />
-      <Sliderone />
+      <Acheivement/>
       <Contactform/>   
       </div>
      

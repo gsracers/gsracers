@@ -91,7 +91,7 @@ function Hero() {
             muted
             className="  w-full "
           >
-            <source src={herovideo} type="video/mp4" />
+            <source src="https://res.cloudinary.com/dtcbbzlix/video/upload/v1725175353/07222-1_e1fjpm.mp4" type="video/mp4" />
           </video>
         </motion.div>
       </div>

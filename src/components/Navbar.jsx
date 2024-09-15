@@ -1,33 +1,42 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import imagedata from "../utils/imagedata";
 import LOGO from "../assets/logo-1.png";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-console.log("tanay");
-const Hamburgercomponent = () => {
+// Hamburger component for mobile view
+const Hamburgercomponent = ({ contactRef, sethamburger }) => {
   return (
     <motion.div
       animate={{ y: 0, opacity: 1 }}
       initial={{ y: -30, opacity: 0 }}
       transition={{ delay: 0, duration: 0.5 }}
       exit={{ y: -100, opacity: 0 }}
-      className="h-full   w-full"
+      className="h-full w-full"
     >
-      <ul className="grid justify-items-center grid-cols-1 font-proracing text-2xl gap-1 border-6">
-       <Link to = "/aboutus"> <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
-          About us
-        </li></Link>
-        <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
+      <ul className="grid text-center justify-items-center grid-cols-1 font-proracing text-2xl gap-1 border-6">
+        <Link to="/aboutus">
+          <li className="menu-item text-center hover:text-blue-600 text-blue-300 duration-300">
+            About us
+          </li>
+        </Link>
+        <li className="menu-item text-center hover:text-blue-600 text-blue-300 duration-300">
           Home
         </li>
-        <li className="px-4 menu-item  w-40  text-center hover:text-blue-600  text-blue-300 duration-300">
+        <li className="menu-item text-center hover:text-blue-600 text-blue-300 duration-300">
           our team
         </li>
-        <li className="px-4 menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
+        <li className="menu-item text-center hover:text-blue-600 text-blue-300 duration-300">
           Sponsorship
         </li>
-        <li className="px-4menu-item  w-40 text-center hover:text-blue-600  text-blue-300 duration-300">
+        {/* Updated Contact click to scroll and close the hamburger */}
+        <li
+          className="menu-item text-center hover:text-blue-600 text-blue-300 duration-300"
+          onClick={() => {
+            contactRef.current.scrollIntoView({ behavior: "smooth" });
+            sethamburger(false); // Close hamburger after scroll
+          }}
+        >
           Contact
         </li>
       </ul>
@@ -35,25 +44,20 @@ const Hamburgercomponent = () => {
   );
 };
 
-function Navbar() {
+// Navbar component for both desktop and mobile
+function Navbar({ contactRef }) {
   const [hamburger, sethamburger] = useState(false);
-  // handleclick = () => {
-  //     sethamburger(!hamburger)
-  //     {hamburger ? hamburgercomponent() : null}
-  // }
 
   return (
-    <div
-      className=" "
-    >
-      {/* --------------------------------------------------nav bar------------------------------------- */}
-      <div className="nav-bar h-36  w-full  px-1/6 ">
-        <div className=" out-container w-11/12 mx-auto flex justify-between items-center h-full">
-          <div className="logo-container max-h-28   max-w-28  p-1">
-            <img src={LOGO} alt="LOGO" className="bg-" />
+    <div>
+      {/* Navbar for desktop and mobile */}
+      <div className="nav-bar h-36 w-full px-1/6">
+        <div className="out-container w-11/12 mx-auto flex justify-between items-center h-full">
+          <div className="logo-container max-h-28 max-w-28 p-1">
+            <img src={imagedata.logo} alt="LOGO" />
           </div>
           <div className="lg:hidden">
-            <button className=""
+            <button
               onClick={() => {
                 sethamburger(!hamburger);
               }}
@@ -62,32 +66,39 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="menu-container  lg:inline hidden rounded-3xl px-2  backdrop-blur-3xl  ">
-            <ul className=" flex  flex-1 justify-between   capitalize cursor-pointer font-extrabold font-proracing text-2xl p-1 px-3">
-            <Link to = "/aboutus"> <li className="px-4 menu-item hover:text-blue-600  text-blue-300   duration-300">
-                About us
-              </li> </Link>
-              <li className="px-4 menu-item hover:text-blue-600  text-blue-300 duration-300">
-                Home
-              </li>
-              <li className="px-4 menu-item hover:text-blue-600  text-blue-300 duration-300">
+          <div className="menu-container lg:inline hidden rounded-3xl px-2 backdrop-blur-3xl">
+            <ul className="flex flex-1 justify-between capitalize cursor-pointer font-extrabold font-proracing text-2xl p-1 px-3">
+              <Link to="/">
+                <li className="px-4 menu-item hover:text-blue-600 text-blue-300 duration-300">
+                  Home
+                </li>
+              </Link>
+              <Link to="/aboutus">
+                <li className="px-4 menu-item hover:text-blue-600 text-blue-300 duration-300">
+                  About us
+                </li>
+              </Link>
+              <li className="px-4 menu-item hover:text-blue-600 text-blue-300 duration-300">
                 our team
               </li>
-              <li className="px-4 menu-item hover:text-blue-600  text-blue-300 duration-300">
-                Sponsorship
-              </li>
-              <li className="px-4menu-item hover:text-blue-600  text-blue-300 duration-300">
+              <Link to="/sponsorship">
+                <li className="px-4 menu-item hover:text-blue-600 text-blue-300 duration-300">
+                  sponsorship
+                </li>
+              </Link>
+              <li
+                className="px-4 menu-item hover:text-blue-600 text-blue-300 duration-300"
+                onClick={() => contactRef.current.scrollIntoView({ behavior: "smooth" })}
+              >
                 Contact
               </li>
             </ul>
           </div>
-
-          {/* hamburger drop  */}
         </div>
       </div>
-      {/* navbar end  */}
 
-      {hamburger ? <Hamburgercomponent /> : null}
+      {/* Hamburger menu for mobile view */}
+      {hamburger ? <Hamburgercomponent contactRef={contactRef} sethamburger={sethamburger} /> : null}
     </div>
   );
 }

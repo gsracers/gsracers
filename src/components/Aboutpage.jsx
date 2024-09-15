@@ -100,8 +100,8 @@ function Aboutpage() {
             transition={{ delay: 2, duration: 0.5 }} className="sgsits my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
                     <div className="img lg:w-2/5 w-full p-2 lg:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
                     <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 ">
-                      <h1 className="text-2xl capitalize font-bold font-proracing">SGSITS</h1>
-                      <p className="text-lg font-semibold text-justify" >Shri Govindram Seksaria Institute of Technology and Science (SGSITS) in Indore, established in 1952, has solidified its position as a premier institution in Madhya Pradesh and the western region. Recognized for its academic excellence, SGSITS has consistently ranked among India's top engineering colleges, including IITs and NITs. Granted autonomous status by AICTE and UGC in 1989, the institute continues to be affiliated with the Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal.</p>
+                      <h1 className="text-2xl capitalize font-bold font-proracing">E-BAJA</h1>
+                      <p className="text-lg font-semibold text-justify" >We're thrilled to be participating in E-BAJA, a premier platform for showcasing cutting-edge electric ATV technology. Our team is eager to unveil our innovative vehicle, designed to push the boundaries of sustainable performance. By engaging with industry leaders and competing against top talent, we aim to contribute to the advancement of electric mobility and inspire future generations of engineers.</p>
                     </div>
                     
 
@@ -122,6 +122,7 @@ function Aboutpage() {
                   animate={{ x: "-100%" }}
                   transition={{
                     duration: 40,
+                    delay: 5,
                     repeat: Infinity,
                     ease: "linear",
                   }}
@@ -142,6 +143,7 @@ function Aboutpage() {
                   animate={{ x: "-100%" }}
                   transition={{
                     duration: 40,
+                    delay: 5,
                     repeat: Infinity,
                     ease: "linear",
                   }}

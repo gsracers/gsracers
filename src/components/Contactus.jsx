@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Contactus() {
+export default function Contactus({ contactRef }) {
   return (
-    <footer
-      className=" text-center lg:text-left overflow-hidden 
+    <footer ref={contactRef}
+      className=" text-center contact-section lg:text-left overflow-hidden 
        w-full h-full  text-white roboto-regular ">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between">
