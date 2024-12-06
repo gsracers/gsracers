@@ -5,7 +5,7 @@ const Card = (props) => {
     <>
       <div className="flex hover:scale-105 duration-300 flex-col rounded-lg bg-blue-800/10 shadow-sm w-96 p-8 my-6 border border-blue-600">
         <div className="pb-8 m-0 mb-8 text-center text-slate-100 border-b border-blue-600">
-          <p className="text-3xl uppercase font-semibold text-slate-300">
+          <p className="text-3xl uppercase font-semibold text-yellow-200">
             {props.category}
           </p>
           <h1 className="flex justify-center gap-1 mt-4 font-bold text-white">

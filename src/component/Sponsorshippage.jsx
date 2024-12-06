@@ -21,26 +21,7 @@ function Sponsorshippage() {
     cssEase: "linear",
     arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 540,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
+    
   };
 
   return (
@@ -55,9 +36,9 @@ function Sponsorshippage() {
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
             </div>
 
-            <div className="hidden lg:inline">
-              <div className="md:w-[95%] md:mx-auto h-full lg:w-full 2xl:w-4/5">
-                <Slider className=" overflow- " {...settings}>
+            <div className="hidden xl:inline">
+              <div className="md:w-[95%] bg-blue-900/10 p-10 rounded-lg md:mx-auto h-full lg:w-full 2xl:w-4/5">
+                <Slider className=" " {...settings}>
                   {data.map((item) => (
                     <Glowcard
                       key={item.id}
@@ -68,18 +49,21 @@ function Sponsorshippage() {
                   ))}
                 </Slider>
               </div>
+
+              <div className="flex flex-wrap gap-1 justify-center xl:hidden">
+              {data.map((item) => (
+                <Glowcard
+                  key={item.id}
+                  img={item.img}
+                  tittle={item.tittle}
+                  content={item.content}
+                />
+              ))}
+            </div>
             </div>
 
             <div>
-              <div className="flex flex-wrap gap-1 justify-center lg:hidden">
-                {data.map((item) => (
-                  <Glowcard
-                    img={item.img}
-                    tittle={item.tittle}
-                    content={item.content}
-                  />
-                ))}
-              </div>
+             
             </div>
 
             <div className="py-20">
@@ -89,7 +73,7 @@ function Sponsorshippage() {
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
             </div>
 
-            <div className="flex flex-wrap gap-5 justify-center lg:w-4/5 lg:mx-auto">
+            <div className="flex flex-wrap gap-5 bg-blue-900/10 rounded-xl p-5 justify-center lg:w-4/5 lg:mx-auto">
               {sponsorpackage.map((item) => (
                 <Card
                   category={item.category}

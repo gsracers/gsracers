@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../utils/data";
+import data from "../utils/acheivement";
 import Glowcard from "./Glowcard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -50,8 +50,8 @@ function Acheivement() {
               </h1>
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
             </div>
-            <div className="hidden lg:inline">
-              <div className="md:w-[95%] md:mx-auto h-full lg:w-full 2xl:w-4/5">
+            <div className="hidden xl:inline my-5">
+              <div className="2xl:w-4/5">
                 <Slider className=" overflow- " {...settings}>
                   {data.map((item) => (
                     <Glowcard
@@ -65,7 +65,7 @@ function Acheivement() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-1 justify-center lg:hidden">
+            <div className="flex flex-wrap gap-10 justify-center my-10 xl:hidden">
               {data.map((item) => (
                 <Glowcard
                   key={item.id}

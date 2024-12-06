@@ -1,6 +1,6 @@
 import "./index.css";
-import Navbar from "./components/Navbar";
-import Contactus from "./components/Contactus";
+import Navbar from "./component/Navbar";
+import Contactus from "./component/Contactus";
 import { Outlet } from "react-router-dom";
 import { useRef } from "react";
 

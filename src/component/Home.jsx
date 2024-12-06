@@ -1,6 +1,6 @@
 import React from 'react'
 import HERO_IMG_PATH from "../assets/hero2.png";
-import data from "../utils/data";
+import data from "../utils/acheivement";
 import Abouthome from "./Abouthome";
 import "../index.css";
 import Acheivement from "./Acheivement";

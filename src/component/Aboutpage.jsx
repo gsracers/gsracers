@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Marqueecard from "./Marqueecard";
 import img1 from "../assets/img2.jpg";
 import img2 from "../assets/img3.jpg";
+import '@fontsource/exo-2';
 
 // Static image imports
 import image1 from "../assets/evolution/g1/g1_1.jpg";
@@ -51,7 +52,7 @@ const imagePaths = [
 function Aboutpage() {
   return (
     <>
-      <div className="py-10 w-full h-full roboto-regular ">
+      <div className="py-10 w-full h-full font-exo-2 ">
         <div className="w-full overflow-hidden">
           <div className="w-11/12 mx-auto">
             <div className="w-full">
@@ -62,46 +63,46 @@ function Aboutpage() {
               <div className="py-10 flex flex-col gap-10">
                   <motion.div     animate={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
-            transition={{ delay: 0.5, duration: 1 }} className="gsracers bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img lg:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
-                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 justify-center ">
+            transition={{ delay: 0.5, duration: 1 }} className="gsracers bg-blue-900/10 border-blue-600 border-2 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img xl:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
+                    <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 justify-center ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">GS RACERS</h1>
-                      <p className="text-lg font-semibold text-justify" >Team GSRacers, founded in 2007 at SGSITS College, is a passion-driven team with a rich history of excellence in automotive engineering. Specializing in creating physical vehicles, particularly ATVs. Over the years, GSRacers has participated in more than 17 national-level events, and an international event , consistently showcasing their dedication, innovation, and technical prowess. Our hard work and commitment were rewarded in 2014 when we secured All India Rank 1, a significant milestone in our journey. The team has a long-standing tradition of competing in M-BAJA, having been a part of this prestigious event for 17 consecutive years. Embracing new technologies and expanding their horizons, GSRacers ventured into the electrical segment last year. Demonstrating their versatility and innovative spirit, they successfully developed two vehicles from different segments, highlighting our ability to adapt and excel in a rapidly evolving field.</p>
+                      <p className="text-lg text-slate-300 font-medium  text-justify" >Team GSRacers, founded in 2007 at SGSITS College, is a passion-driven team with a rich history of excellence in automotive engineering. Specializing in creating physical vehicles, particularly ATVs. Over the years, GSRacers has participated in more than 17 national-level events, and an international event , consistently showcasing their dedication, innovation, and technical prowess. Our hard work and commitment were rewarded in 2014 when we secured All India Rank 1, a significant milestone in our journey. The team has a long-standing tradition of competing in M-BAJA, having been a part of this prestigious event for 17 consecutive years. Embracing new technologies and expanding their horizons, GSRacers ventured into the electrical segment last year. Demonstrating their versatility and innovative spirit, they successfully developed two vehicles from different segments, highlighting our ability to adapt and excel in a rapidly evolving field.</p>
                     </div>
                     
 
                   </motion.div>
 
-                  <motion.div     animate={{ x: 0, opacity: 1 }}
+                  <motion.div     whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
-            transition={{ delay: 1, duration: 0.5 }} className="sgsits my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img lg:w-2/5 w-full p-2 lg:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
-                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 ">
+            transition={{ delay: 0, duration: 1 }} className="sgsits my-10 bg-blue-900/10 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img xl:w-2/5 w-full p-2 xl:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
+                    <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">SGSITS</h1>
-                      <p className="text-lg font-semibold text-justify" >Shri Govindram Seksaria Institute of Technology and Science (SGSITS) in Indore, established in 1952, has solidified its position as a premier institution in Madhya Pradesh and the western region. Recognized for its academic excellence, SGSITS has consistently ranked among India's top engineering colleges, including IITs and NITs. Granted autonomous status by AICTE and UGC in 1989, the institute continues to be affiliated with the Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal.</p>
+                      <p className="text-lg  text-slate-300 font-medium text-justify" >Shri Govindram Seksaria Institute of Technology and Science (SGSITS) in Indore, established in 1952, has solidified its position as a premier institution in Madhya Pradesh and the western region. Recognized for its academic excellence, SGSITS has consistently ranked among India's top engineering colleges, including IITs and NITs. Granted autonomous status by AICTE and UGC in 1989, the institute continues to be affiliated with the Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal.</p>
                     </div>
                     
 
                   </motion.div>
 
-                  <motion.div     animate={{ x: 0, opacity: 1 }}
+                  <motion.div     whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
-            transition={{ delay: 1.5, duration: 0.5 }} className="gsracers my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img lg:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
-                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 \ ">
+            transition={{ delay: 0, duration: 1 }} className="gsracers my-10 bg-blue-900/10 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img xl:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
+                    <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 \ ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">BAJA SAE</h1>
-                      <p className="text-lg font-semibold text-justify" >BAJA SAE INDIA is an inter-collegiate competition in which students from various universities compete to design and build an All Terrain Vehicle. Since it’s introduction, BAJA has grown into one of the biggest and most prestigious engineering event in INDIA in which over 200 teams compete against each other to build the fastest, lightest, most rugged and affordable off-road vehicle.</p>
+                      <p className="text-lg  text-slate-300 font-medium text-justify" >BAJA SAE INDIA is an inter-collegiate competition in which students from various universities compete to design and build an All Terrain Vehicle. Since it’s introduction, BAJA has grown into one of the biggest and most prestigious engineering event in INDIA in which over 200 teams compete against each other to build the fastest, lightest, most rugged and affordable off-road vehicle.</p>
                     </div>
                     
 
                   </motion.div>
-                  <motion.div     animate={{ x: 0, opacity: 1 }}
+                  <motion.div     whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
-            transition={{ delay: 2, duration: 0.5 }} className="sgsits my-10 bg-blue-900/10 flex-col lg:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img lg:w-2/5 w-full p-2 lg:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
-                    <div className="lg:w-3/5 w-full p-2  text flex-col flex gap-2 ">
+            transition={{ delay: 0, duration: 1 }} className="sgsits my-10 bg-blue-900/10 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
+                    <div className="img xl:w-2/5 w-full p-2 xl:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
+                    <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">E-BAJA</h1>
-                      <p className="text-lg font-semibold text-justify" >We're thrilled to be participating in E-BAJA, a premier platform for showcasing cutting-edge electric ATV technology. Our team is eager to unveil our innovative vehicle, designed to push the boundaries of sustainable performance. By engaging with industry leaders and competing against top talent, we aim to contribute to the advancement of electric mobility and inspire future generations of engineers.</p>
+                      <p className="text-lg  text-slate-300 font-medium text-justify" >We're thrilled to be participating in E-BAJA, a premier platform for showcasing cutting-edge electric ATV technology. Our team is eager to unveil our innovative vehicle, designed to push the boundaries of sustainable performance. By engaging with industry leaders and competing against top talent, we aim to contribute to the advancement of electric mobility and inspire future generations of engineers.</p>
                     </div>
                     
 

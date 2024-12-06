@@ -136,3 +136,27 @@
       rgba(0, 0, 0, 0)
     );
   }
+
+ /* Safari-Specific CSS */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    /* Fix for blur and positioning in Safari */
+    .safari-blur-fix {
+      filter: blur(15px);
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
