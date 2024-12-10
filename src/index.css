@@ -41,6 +41,14 @@
       font-family: "proracing";
       src: url("./utils/fonts/ProRacingSlant.otf" ) format("OpenType");
     }
+    @font-face {
+      font-family: "santos";
+      src: url("./utils/fonts/Santos-ywoPq.otf" ) format("OpenType");
+    }
+    @font-face {
+      font-family: "kehlani";
+      src: url("./utils/fonts/Kehlani-xRxvR.otf" ) format("OpenType");
+    }
   .gradient{
     background: linear-gradient(
   to right,

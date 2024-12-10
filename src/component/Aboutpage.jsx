@@ -63,7 +63,7 @@ function Aboutpage() {
               <div className="py-10 flex flex-col gap-10">
                   <motion.div     animate={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
-            transition={{ delay: 0.5, duration: 1 }} className="gsracers bg-blue-900/10 border-blue-600 border-2 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
+            transition={{ delay: 0.5, duration: 1 }} className="gsracers bg-blue-900/10  flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
                     <div className="img xl:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
                     <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 justify-center ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">GS RACERS</h1>

@@ -1,9 +1,10 @@
 import React from "react";
 import data from "../utils/acheivement";
-import Glowcard from "./Glowcard";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Glowcard2 from "./Glowcard2";
 
 function Acheivement() {
   const settings = {
@@ -54,7 +55,7 @@ function Acheivement() {
               <div className="2xl:w-4/5">
                 <Slider className=" overflow- " {...settings}>
                   {data.map((item) => (
-                    <Glowcard
+                    <Glowcard2
                       key={item.id}
                       img={item.img}
                       tittle={item.tittle}
@@ -67,7 +68,7 @@ function Acheivement() {
 
             <div className="flex flex-wrap gap-10 justify-center my-10 xl:hidden">
               {data.map((item) => (
-                <Glowcard
+                <Glowcard2
                   key={item.id}
                   img={item.img}
                   tittle={item.tittle}

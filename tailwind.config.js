@@ -25,7 +25,9 @@ export default {
   		fontFamily: {
   			trinos: ["trinossolid", "sans-serif"],
   			draco: ["draco" ,"sans-serif" ],
-  			proracing: ["proracing" ,"sans-serif" ]
+  			proracing: ["proracing" ,"sans-serif" ],
+			santos: ["santos" ,"sans-serif" ],
+			kehlani: ["kehlani" ,"sans-serif" ]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

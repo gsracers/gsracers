@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Glowcard from "./Glowcard";
 import data from "../utils/sponsordata";
 import Slider from "react-slick";
@@ -8,6 +8,9 @@ import Card from "./Card";
 import sponsorpackage from "../utils/sponsorpackage";
 import imagedata from "../utils/sponsorimagedata";
 import Sponsorgrid from "./Sponsorgrid";
+import { useEffect } from "react";
+
+
 
 function Sponsorshippage() {
   const settings = {
@@ -23,7 +26,14 @@ function Sponsorshippage() {
 
     
   };
-
+  useEffect(() => {
+    // Smoothly scroll to the top of the page when the component is rendered
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth', // Enables smooth scrolling
+    });
+  }, []);
   return (
     <>
       <div className="py-10 w-full h-full roboto-regular ">

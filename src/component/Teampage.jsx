@@ -2,6 +2,9 @@ import { FaFlagCheckered, FaTachometerAlt, FaUsers } from 'react-icons/fa';
 import '@fontsource/orbitron'; // Racing-inspired font for headers
 import '@fontsource/exo-2'; // Supporting font for body text
 import { motion } from 'framer-motion';
+import img2 from "../assets/teams/22-23.jpg";
+import img3 from "../assets/teams/21-22.jpg";
+
 
 const teamData = [
   {
@@ -80,7 +83,7 @@ const teamData = [
     captain: "Ashirwad Mishra",
     viceCaptain: "Chaitanya Buwade",
     teamManager: "Prateek Sagitra",
-    image: "/placeholder.svg?height=350&width=700",
+    image: img2,
     mentors: [
       "Sarthak Mehta",
       "Aakash Kumar Mishra",
@@ -142,7 +145,7 @@ const teamData = [
     team: "2022",
     captain: "Varun Dutt Saxena",
     viceCaptain: "Samarth Jain",
-    image: "/placeholder.svg?height=300&width=600",
+    image: img3,
     subTeams: {
       Suspension: [
         {name: "Harsh Sharma", role: "HOD & Driver"},
