@@ -8,11 +8,14 @@ import Card from "./Card";
 import sponsorpackage from "../utils/sponsorpackage";
 import imagedata from "../utils/sponsorimagedata";
 import Sponsorgrid from "./Sponsorgrid";
-import { useEffect } from "react";
+import { useState , useEffect } from "react";
 
 
 
 function Sponsorshippage() {
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => { setWindowWidth(window.innerWidth) });
   const settings = {
     dots: false,
     infinite: true,
@@ -45,9 +48,8 @@ function Sponsorshippage() {
               </h1>
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
             </div>
-
-            <div className="hidden xl:inline">
-              <div className="md:w-[95%] bg-blue-900/10 p-10 rounded-lg md:mx-auto h-full lg:w-full 2xl:w-4/5">
+{(windowWidth> 1400) && (<div className="">
+              <div className="w-full bg-blue-900/10 p-10 rounded-lg :mx-auto h-full ">
                 <Slider className=" " {...settings}>
                   {data.map((item) => (
                     <Glowcard
@@ -59,8 +61,9 @@ function Sponsorshippage() {
                   ))}
                 </Slider>
               </div>
+            </div>)}
 
-              <div className="flex flex-wrap gap-1 justify-center xl:hidden">
+            {(windowWidth <= 1400  ) &&  (<div className="flex flex-wrap gap-1 justify-center">
               {data.map((item) => (
                 <Glowcard
                   key={item.id}
@@ -69,12 +72,10 @@ function Sponsorshippage() {
                   content={item.content}
                 />
               ))}
-            </div>
-            </div>
+            </div>)}
+            
 
-            <div>
-             
-            </div>
+            
 
             <div className="py-20">
               <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">

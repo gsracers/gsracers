@@ -11,7 +11,6 @@ function Acheivement() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 window.addEventListener("resize", () => { setWindowWidth(window.innerWidth) });
   
-console.log(windowWidth);
 
   
  
