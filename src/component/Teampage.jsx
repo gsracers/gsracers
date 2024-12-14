@@ -2,6 +2,7 @@ import { FaFlagCheckered, FaTachometerAlt, FaUsers } from 'react-icons/fa';
 import '@fontsource/orbitron'; // Racing-inspired font for headers
 import '@fontsource/exo-2'; // Supporting font for body text
 import { motion } from 'framer-motion';
+import img1 from '../assets/teams/23-24.jpg';
 import img2 from "../assets/teams/22-23.jpg";
 import img3 from "../assets/teams/21-22.jpg";
 
@@ -12,7 +13,9 @@ const teamData = [
     teamManager: "Siddharth Chaudhary",
     captain: "Siddharth Chaudhary",
     viceCaptain: "Shreyansh Chaurasia",
-    image: "https://res.cloudinary.com/dtcbbzlix/image/upload/v1725794340/WhatsApp_Image_2024-09-07_at_21.03.04_136ee771_lpzyfw.jpg",
+    driver : "xyz",
+    codriver : "abc",
+    image: img1, 
     mentors: [
       "Ashirwad Mishra",
       "Chaitanya Buwade",
@@ -257,7 +260,16 @@ export default function TeamPage() {
                 <p className="text-lg text-gray-100">{team.viceCaptain}</p>
               </motion.div>
             </div>
-
+            {(team.driver && team.codriver) && (<div className="grid md:grid-cols-2 gap-8 mb-8 text-center">
+              <motion.div variants={itemVariant}>
+                <h3 className="text-xl font-semibold text-blue-300 font-proracing">Driver</h3>
+                <p className="text-lg text-gray-100">{team?.driver}</p>
+              </motion.div>
+              <motion.div variants={itemVariant}>
+                <h3 className="text-xl font-semibold text-blue-300 font-proracing">co-Driver</h3>
+                <p className="text-lg text-gray-100">{team?.codriver}</p>
+              </motion.div>
+            </div>)}
             {team.mentors && (
               <motion.div variants={containerVariant} className="mb-8">
                 <h3 className="text-2xl font-bold text-center text-blue-400 mb-4 font-proracing">

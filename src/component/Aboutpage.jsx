@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Marqueecard from "./Marqueecard";
 import img1 from "../assets/img2.jpg";
 import img2 from "../assets/img3.jpg";
+import img3 from "../assets/ebaja.jpg";
+import img4 from "../assets/bajasae.jpg";
 import '@fontsource/exo-2';
 
 // Static image imports
@@ -88,7 +90,7 @@ function Aboutpage() {
                   <motion.div     whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
             transition={{ delay: 0, duration: 1 }} className="gsracers my-10 bg-blue-900/10 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img xl:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img1} alt="" /></div>
+                    <div className="img xl:w-2/5 w-full p-2  object-cover"> <img className=" rounded-lg  w-full"  src={img4} alt="" /></div>
                     <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 \ ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">BAJA SAE</h1>
                       <p className="text-lg  text-slate-300 font-medium text-justify" >BAJA SAE INDIA is an inter-collegiate competition in which students from various universities compete to design and build an All Terrain Vehicle. Since it’s introduction, BAJA has grown into one of the biggest and most prestigious engineering event in INDIA in which over 200 teams compete against each other to build the fastest, lightest, most rugged and affordable off-road vehicle.</p>
@@ -99,7 +101,7 @@ function Aboutpage() {
                   <motion.div     whileInView={{ x: 0, opacity: 1 }}
             initial={{ x: -100, opacity: 0 }}
             transition={{ delay: 0, duration: 1 }} className="sgsits my-10 bg-blue-900/10 flex-col xl:flex-row flex gap-4 p-5 rounded-xl ">
-                    <div className="img xl:w-2/5 w-full p-2 xl:order-2  object-cover"> <img className=" rounded-lg  w-full"  src={img2} alt="" /></div>
+                    <div className="img xl:w-2/5 w-full p-2 xl:order-2  object-cover"> <img className=" rounded-lg  w-full h-96"  src={img3} alt="" /></div>
                     <div className="xl:w-3/5 w-full p-2  text flex-col flex gap-2 ">
                       <h1 className="text-2xl capitalize font-bold font-proracing">E-BAJA</h1>
                       <p className="text-lg  text-slate-300 font-medium text-justify" >We're thrilled to be participating in E-BAJA, a premier platform for showcasing cutting-edge electric ATV technology. Our team is eager to unveil our innovative vehicle, designed to push the boundaries of sustainable performance. By engaging with industry leaders and competing against top talent, we aim to contribute to the advancement of electric mobility and inspire future generations of engineers.</p>
