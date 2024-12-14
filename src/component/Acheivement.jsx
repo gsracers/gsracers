@@ -5,8 +5,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Glowcard2 from "./Glowcard2";
+import { useState , useEffect } from "react";
 
 function Acheivement() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+window.addEventListener("resize", () => { setWindowWidth(window.innerWidth) });
+  
+console.log(windowWidth);
+
+  
+ 
   const settings = {
     dots: false,
     infinite: true,
@@ -18,26 +26,7 @@ function Acheivement() {
     cssEase: "linear",
     arrows: false,
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 540,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
+   
   };
 
   return (
@@ -51,9 +40,10 @@ function Acheivement() {
               </h1>
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
             </div>
-            <div className="hidden xl:inline my-5">
-              <div className="2xl:w-4/5">
-                <Slider className=" overflow- " {...settings}>
+            {(windowWidth> 1400) && (
+            <div className=" my-5">
+              <div className="w-full mx-auto">
+                <Slider className="  " {...settings}>
                   {data.map((item) => (
                     <Glowcard2
                       key={item.id}
@@ -64,9 +54,9 @@ function Acheivement() {
                   ))}
                 </Slider>
               </div>
-            </div>
-
-            <div className="flex flex-wrap gap-10 justify-center my-10 xl:hidden">
+            </div>)}
+            
+            {(windowWidth <= 1400  ) &&  (<div className="flex flex-wrap gap-10 justify-center my-10">
               {data.map((item) => (
                 <Glowcard2
                   key={item.id}
@@ -75,7 +65,9 @@ function Acheivement() {
                   content={item.content}
                 />
               ))}
-            </div>
+            </div>)}
+
+            
           </div>
         </div>
       </div>
