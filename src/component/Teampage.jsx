@@ -13,8 +13,8 @@ const teamData = [
     teamManager: "Siddharth Chaudhary",
     captain: "Siddharth Chaudhary",
     viceCaptain: "Shreyansh Chaurasia",
-    driver : "xyz",
-    codriver : "abc",
+    driver : "Anugya Chaurasia",
+    codriver : "Chaitanya Buwade",
     image: img1, 
     mentors: [
       "Ashirwad Mishra",
@@ -33,9 +33,9 @@ const teamData = [
       ],
       "Vehicle Dynamics": [
         {name: "Shreyansh Chaurasia", role: "HOD"},
-        {name: "Arnav Shinde"},
+        {name: "Arnav Vikram Shinde"},
         {name: "Aman Verma"},
-        {name: "Prakhar Shrivastav"},
+        {name: "Prakhar Shrivastava"},
         {name: "Angel Sahu"},
         {name: "Shubham Pareek"}
       ],
@@ -46,7 +46,7 @@ const teamData = [
       ],
       Transmission: [
         {name: "Ashutosh Kushwah", role: "HOD"},
-        {name: "Shreyas Sinha"},
+        {name: "Shreyash Sinha"},
         {name: "Piyush Kushwah"},
         {name: "Ishan Sabnis"}
       ],
@@ -58,10 +58,11 @@ const teamData = [
       ],
       Management: [
         {name: "Siddharth Chaudhary", role: "Team Manager"},
-        {name: "Shreyas Sinha"},
+        {name: "Shreyash Sinha"},
         {name: "Akshat Pratap Singh Chauhan"},
         {name: "Arin Patel"},
         {name: "Pranav Dhoke"},
+     
         {name: "Shivansh Markam"}
       ],
       CAE: [
@@ -70,12 +71,13 @@ const teamData = [
         {name: "Shubham Pareek"},
         {name: "Priyanshu Masania"},
         {name: "Kapil Soni"},
+        {name: "Aman Verma"},
         {name: "Urvija Pandey"}
       ],
       MBD: [
         {name: "Shreyansh Chaurasia", role: "HOD"},
-        {name: "Arnav Shinde"},
-        {name: "Prakhar Shrivastav"},
+        {name: "Arnav Vikram Shinde"},
+        {name: "Prakhar Shrivastava"},
         {name: "Angel Sahu"},
         {name: "Ishan Sabnis"}
       ]

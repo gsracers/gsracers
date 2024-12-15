@@ -16,7 +16,7 @@ function Glowcard2(props) {
         </h1>
         <ul className="text-center text-slate-300 press-start-2p-regular flex flex-col text-sm gap-1 list-disc list-inside">
           {props.content.map((item, index) => (
-            <li className="text-center " key={index}>{item}</li>
+            <li className="text-left " key={index}>{item}</li>
           ))}
         </ul>
       </div>
