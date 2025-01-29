@@ -78,21 +78,22 @@ function Sponsorshippage() {
             
 
             <div className="py-20">
-              <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">
-                sponsorship packages
-              </h1>
-              <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
-            </div>
+  <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">
+    Sponsorship Packages
+  </h1>
+  <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
+</div>
 
-            <div className="flex flex-wrap gap-5 bg-blue-900/10 rounded-xl p-5 justify-center lg:w-4/5 lg:mx-auto">
-              {sponsorpackage.map((item) => (
-                <Card
-                  category={item.category}
-                  price={item.price}
-                  features={item.features}
-                />
-              ))}
-            </div>
+<div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-blue-900/10 rounded-xl p-8 lg:w-4/5 lg:mx-auto">
+  {sponsorpackage.map((item) => (
+    <Card
+      key={item.category} // Ensure unique key for React reconciliation
+      category={item.category}
+      price={item.price}
+      features={item.features}
+    />
+  ))}
+</div>
             <div className="py-20">
               <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">
                 our sponsors

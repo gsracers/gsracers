@@ -1,45 +1,43 @@
-import React from 'react';
 
-const Card = (props) => {
+import { motion } from "framer-motion"
+
+
+const Card = ({ category, price, features }) => {
   return (
-    <>
-      <div className="flex hover:scale-105 duration-300 flex-col rounded-lg bg-blue-800/10 shadow-sm w-96 p-8 my-6 border border-blue-600">
-        <div className="pb-8 m-0 mb-8 text-center text-slate-100 border-b border-blue-600">
-          <p className="text-3xl uppercase font-semibold text-yellow-200">
-            {props.category}
-          </p>
-          <h1 className="flex justify-center gap-1 mt-4 font-bold text-white">
-            <span className="text-lg"></span>{props.price}
-          </h1>
-        </div>
-        <div className="p-0">
-          <ul className="flex flex-col gap-4">
-            {props.features.map((item, index) => (
-              <li key={index} className="flex items-center gap-4">
-                <span className="p-1 border rounded-full border-slate-500 bg-slate-700">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    className="w-4 h-4 text-slate-300"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 12.75l6 6 9-13.5"
-                    />
-                  </svg>
-                </span>
-                <p className="text-slate-300">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.03 }}
+      className="flex flex-col rounded-xl bg-gradient-to-br from-blue-900/20 to-blue-900/10 shadow-lg overflow-hidden"
+    >
+      <div className="p-8 bg-blue-800/20 border-b border-blue-700/50">
+        <h3 className="text-2xl font-bold text-blue-300 mb-2">{category}</h3>
+        <p className="text-4xl font-extrabold text-yellow-300">{price}</p>
       </div>
-    </>
-  );
-};
+      <ul className="flex-grow p-8 space-y-4">
+        {features.map((feature, index) => (
+          <motion.li
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 * index }}
+            className="flex items-center space-x-3"
+          >
+            <svg className="flex-shrink-0 w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="text-blue-100">{feature}</span>
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  )
+}
 
-export default Card;
+export default Card
+
