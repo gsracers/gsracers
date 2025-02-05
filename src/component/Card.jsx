@@ -9,7 +9,7 @@ const Card = ({ category, price, features }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.03 }}
-      className="flex flex-col w-96  justify-items-center rounded-xl bg-gradient-to-br from-blue-900/20 to-blue-900/10 shadow-lg overflow-hidden"
+      className="flex flex-col w-96 rounded-xl bg-gradient-to-br from-blue-900/20 to-blue-900/10 shadow-lg overflow-hidden"
     >
       <div className="p-8 bg-blue-800/20 border-b border-blue-700/50">
         <h3 className="text-2xl font-bold text-blue-300 mb-2">{category}</h3>
