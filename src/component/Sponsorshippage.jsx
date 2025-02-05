@@ -84,7 +84,7 @@ function Sponsorshippage() {
   <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />
 </div>
 
-<div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-blue-900/10 rounded-xl p-8 lg:w-4/5 lg:mx-auto">
+<div className=" flex gap-10 flex-wrap bg-blue-900/10 rounded-xl p-8  lg:mx-auto">
   {sponsorpackage.map((item) => (
     <Card
       key={item.category} // Ensure unique key for React reconciliation
