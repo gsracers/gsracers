@@ -5,17 +5,18 @@ import { motion } from 'framer-motion';
 import img1 from '../assets/teams/23-24.jpg';
 import img2 from "../assets/teams/22-23.jpg";
 import img3 from "../assets/teams/21-22.jpg";
+import React, { useEffect } from 'react';
 
 
 const teamData = [
   {
-    team: "2024",
+    team: "2025",
     teamManager: "Siddharth Chaudhary",
     captain: "Siddharth Chaudhary",
     viceCaptain: "Shreyansh Chaurasia",
     driver : "Anugya Chaurasia",
     codriver : "Chaitanya Buwade",
-    image: img1, 
+    image: "", 
     mentors: [
       "Ashirwad Mishra",
       "Chaitanya Buwade",
@@ -84,11 +85,11 @@ const teamData = [
     }
   },
   {
-    team: "2023",
+    team: "2024",
     captain: "Ashirwad Mishra",
     viceCaptain: "Chaitanya Buwade",
     teamManager: "Prateek Sagitra",
-    image: img2,
+    image: img1,
     mentors: [
       "Sarthak Mehta",
       "Aakash Kumar Mishra",
@@ -150,7 +151,7 @@ const teamData = [
     team: "2022",
     captain: "Varun Dutt Saxena",
     viceCaptain: "Samarth Jain",
-    image: img3,
+    image: img2,
     subTeams: {
       Suspension: [
         {name: "Harsh Sharma", role: "HOD & Driver"},
@@ -215,7 +216,15 @@ const subTeamMemberVariant = {
   tap: { scale: 0.95 },
 };
 
-export default function TeamPage() {
+export default function TeamPage()
+ {useEffect(() => {
+    // Smoothly scroll to the top of the page when the component is rendered
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth', // Enables smooth scrolling
+    });
+  }, []);
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-gray-100 roboto-regular">
       <div className="max-w-7xl mx-auto">

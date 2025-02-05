@@ -23,7 +23,7 @@ export default function ContactForm() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-6xl font-bold text-blue-300 font-proracing tracking-tight">
+          <h2 className="text-2xl md:text-6xl font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-proracing tracking-tight">
             SPONSORSHIP
           </h2>
           <div className="mt-4 h-1 w-24 sm:w-40 mx-auto bg-blue-500" />

@@ -34,7 +34,7 @@ window.addEventListener("resize", () => { setWindowWidth(window.innerWidth) });
         <div className="w-full overflow-hidden">
           <div className="w-11/12 mx-auto">
             <div className="w-full">
-              <h1 className="md:text-4xl text-2xl text-blue-300 font-bold text-center font-proracing">
+              <h1 className="md:text-4xl font-extrabold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600  text-center font-proracing">
                 Our Achievements
               </h1>
               <hr className="bg-blue-900 md:w-1/6 w-1/2 mx-auto border-none my-2 h-1" />

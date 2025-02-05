@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import images from "../assets/logo-1.png";
 import "../index.css";
 import { motion } from "framer-motion";
@@ -29,6 +29,7 @@ import image16 from "../assets/evolution/g16/g16_1.jpg";
 import image17 from "../assets/evolution/g17/g17_1.jpg";
 import image18 from "../assets/evolution/g18/g18_1.jpg";
 
+
 // Store imported images in an array
 const imagePaths = [
   image1,
@@ -52,6 +53,14 @@ const imagePaths = [
 ];
 
 function Aboutpage() {
+  useEffect(() => {
+    // Smoothly scroll to the top of the page when the component is rendered
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth', // Enables smooth scrolling
+    });
+  }, []);
   return (
     <>
       <div className="py-10 w-full h-full font-exo-2 ">
