@@ -15,20 +15,20 @@ export default function ContactForm() {
     const formData = new FormData(form.current);
   
     try {
-      const response = await fetch("/api/sendemail", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formData.get("name"),
           email: formData.get("email"),
           phone: formData.get("phone"),
           message: formData.get("message"),
         }),
-        headers: { "Content-Type": "application/json" },
       });
   
       const data = await response.json();
       if (response.ok) {
-        toast.success("Your message has been sent successfully");
+        toast.success("Email sent successfully!");
       } else {
         toast.error(`Failed: ${data.error}`);
       }
@@ -36,7 +36,7 @@ export default function ContactForm() {
       toast.error("Something went wrong!");
     }
   };
-
+  
   return (
     <div className="relative overflow-hidden bg-[#0a0a1f] py-16 sm:py-24">
       <Toaster position="bottom-left" reverseOrder={false} />

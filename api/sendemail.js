@@ -5,30 +5,23 @@ export default async function handler(req, res) {
   
     const { name, email, phone, message } = req.body;
   
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-  
     try {
-      const emailjs = require("@emailjs/nodejs"); // Use EmailJS for Node.js
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: process.env.EMAILJS_SERVICE_ID,
+          template_id: process.env.EMAILJS_TEMPLATE_ID,
+          user_id: process.env.EMAILJS_PUBLIC_KEY, // Hides the key from frontend
+          template_params: { name, email, phone, message },
+        }),
+      });
   
-      const response = await emailjs.send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
-        {
-          name,
-          email,
-          phone,
-          message,
-        },
-        {
-          publicKey: process.env.PUBLIC_KEY,
-        }
-      );
+      if (!response.ok) throw new Error("Failed to send email");
   
-      return res.status(200).json({ success: true, response });
+      return res.status(200).json({ success: "Email sent!" });
     } catch (error) {
-      return res.status(500).json({ error: "Email sending failed", details: error });
+      return res.status(500).json({ error: error.message });
     }
   }
   
