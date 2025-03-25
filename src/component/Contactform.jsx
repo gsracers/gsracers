@@ -1,34 +1,39 @@
 import React, { useRef } from 'react';
 import imagedata from "../utils/imagedataHome";
-import emailjs from '@emailjs/browser';
+
 import "../index.css";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom"; // If using react-router
 import { ExternalLink } from "lucide-react";
 
-console.log(import.meta.env.SERVICE_ID)
+
 export default function ContactForm() {
   const form = useRef();
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const response = await emailjs
-    .sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, {
-      publicKey: process.env.PUBLIC_KEY,
-    })
-    .then(
-      () => {
-        console.log('SUCCESS!');
-        return true;
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-        return false;
-      },
-    );
-    console.log("response =" ,response);
-    if (response){
-    toast.success("Your message has been sent successfully");
+  
+    const formData = new FormData(form.current);
+  
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      const data = await response.json();
+      if (response.ok) {
+        toast.success("Your message has been sent successfully");
+      } else {
+        toast.error(`Failed: ${data.error}`);
+      }
+    } catch (error) {
+      toast.error("Something went wrong!");
     }
   };
 
