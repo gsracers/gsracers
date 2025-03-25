@@ -15,7 +15,7 @@ export default function ContactForm() {
     const formData = new FormData(form.current);
   
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("https://gsracersweb.vercel.app/api/sendEmail", {
         method: "POST",
         body: JSON.stringify({
           name: formData.get("name"),
