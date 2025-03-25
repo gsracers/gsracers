@@ -15,7 +15,7 @@ export default function ContactForm() {
     const formData = new FormData(form.current);
   
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/sendemail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
