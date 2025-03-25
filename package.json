@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/exo-2": "^5.1.0",
     "@fontsource/orbitron": "^5.1.0",
     "class-variance-authority": "^0.7.0",
@@ -39,6 +40,6 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1"
+    "vite": "^6.2.3"
   }
 }

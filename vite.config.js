@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['react-hot-toast']
+  },
+  define: {
+    'process.env': {} // Ensure there are no conflicts with `process.env`
   }
 })

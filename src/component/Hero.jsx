@@ -1,7 +1,5 @@
 import React from "react";
-import HERO_IMG_PATH from "../assets/hero2.png";
 import { motion } from "framer-motion";
-import herovideo from "../assets/07222-1.mp4"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

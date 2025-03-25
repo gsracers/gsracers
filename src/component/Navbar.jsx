@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import imagedata from "../utils/imagedata";
+import imagedata from "../utils/imagedataHome";
 
 const HamburgerComponent = ({ contactRef, setHamburger }) => {
   return (
@@ -12,7 +12,7 @@ const HamburgerComponent = ({ contactRef, setHamburger }) => {
       exit={{ y: -100, opacity: 0 }}
       className="h-full w-full"
     >
-      <ul className="grid text-center justify-items-center grid-cols-1 font-santos text-2xl gap-1 border-6">
+      <ul className="grid text-center justify-items-center grid-cols-1 font-proracing text-2xl gap-1 border-6">
         <Link to="/" onClick={() => setHamburger(false)}>
           <li className="menu-item hover:text-blue-600 text-blue-300 duration-300">Home</li>
         </Link>

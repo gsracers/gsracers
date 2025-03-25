@@ -30,25 +30,25 @@
 
     @font-face {
       font-family: "trinossolid";
-      src: url("./utils/fonts/trinos-solid-font/TrinosStencil-2OywW.ttf" ) format("truetype");
+      src: url("https://res.cloudinary.com/dlrp2o9dr/raw/upload/v1742912178/TrinosStencil-2OywW_i22wqh.ttf" ) format("truetype");
     }
   
-    @font-face {
+    /* @font-face {
       font-family: "draco";
       src: url("./utils/fonts/Draco.otf" ) format("OpenType");
-    }
+    } */
     @font-face {
       font-family: "proracing";
-      src: url("./utils/fonts/ProRacingSlant.otf" ) format("OpenType");
+      src: url("https://res.cloudinary.com/dlrp2o9dr/raw/upload/v1742912374/ProRacingSlant_rkceux.otf" ) format("OpenType");
     }
-    @font-face {
+    /* @font-face {
       font-family: "santos";
       src: url("./utils/fonts/Santos-ywoPq.otf" ) format("OpenType");
-    }
-    @font-face {
+    } */
+    /* @font-face {
       font-family: "kehlani";
       src: url("./utils/fonts/Kehlani-xRxvR.otf" ) format("OpenType");
-    }
+    } */
   .gradient{
     background: linear-gradient(
   to right,

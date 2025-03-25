@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import imagedata from "../utils/imagedata";
+import imagedata from "../utils/imagedataHome";
 import { browserName, browserVersion } from "react-device-detect"; 
 import { Link } from "react-router-dom";
 function Abouthome() {

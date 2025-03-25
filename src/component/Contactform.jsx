@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useRef } from 'react';
+import imagedata from "../utils/imagedataHome";
+import emailjs from '@emailjs/browser';
 import "../index.css";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom"; // If using react-router
 import { ExternalLink } from "lucide-react";
-import image from "../assets/home/sponsor.jpg"
 
+console.log(import.meta.env.SERVICE_ID)
 export default function ContactForm() {
-  const handleSubmit = (e) => {
+  const form = useRef();
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const response = await emailjs
+    .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
+      publicKey: import.meta.env.VITE_PUBLIC_KEY,
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+        return true;
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+        return false;
+      },
+    );
+    console.log("response =" ,response);
+    if (response){
     toast.success("Your message has been sent successfully");
+    }
   };
 
   return (
@@ -35,7 +56,7 @@ export default function ContactForm() {
               <div className="aspect-w-12 aspect-h-7 lg:aspect-none relative">
                 <img
                   className="rounded-lg shadow-lg object-cover object-center"
-                  src={image}
+                  src={imagedata.sponsor}
                   alt="Placeholder for sponsorship"
                   width={600}
                   height={400}
@@ -48,7 +69,7 @@ export default function ContactForm() {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <h3 className="text-2xl font-bold text-center text-white">
                   LET'S PARTNER UP
                 </h3>
@@ -59,21 +80,25 @@ export default function ContactForm() {
                 <div className="space-y-4">
                   <input
                     type="text"
+                    name='name'
                     placeholder="Name"
                     className="w-full p-3 bg-blue-900/20 border border-blue-500/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <input
                     type="email"
+                    name='email'
                     placeholder="Email"
                     className="w-full p-3 bg-blue-900/20 border border-blue-500/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <input
                     type="tel"
                     placeholder="Phone"
+                    name='phone'
                     className="w-full p-3 bg-blue-900/20 border border-blue-500/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <textarea
                     placeholder="Message"
+                    name='message'
                     rows={4}
                     className="w-full p-3 bg-blue-900/20 border border-blue-500/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />

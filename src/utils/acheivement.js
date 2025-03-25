@@ -1,6 +1,4 @@
-import img1 from "../assets/acheivement/tejas2.0.jpg";
-import img2 from "../assets/acheivement/etejas.jpg";
-import img3 from "../assets/acheivement/audvik.jpg";
+
 const data = [
     
     {
@@ -10,7 +8,7 @@ const data = [
             "Overall Dynamics AIR 3",
             "Pride of Madhya Pradesh - AIR 4 in Sales"
         ],
-        "img": img1
+        "img": "https://res.cloudinary.com/dlrp2o9dr/image/upload/v1742925863/tejas2.0_ljdwi0.jpg"
     },
     {
         "tittle": "E-Tejas 24",
@@ -19,7 +17,7 @@ const data = [
             "AIR 1 in CAE",
             "AIR 14 in Design"
         ],
-        "img": img2
+        "img": "https://res.cloudinary.com/dlrp2o9dr/image/upload/v1742925838/etejas_ayv1pv.jpg"
     },
     {
         "tittle": "Audvik 2014",
@@ -28,7 +26,7 @@ const data = [
             "Overall Physical Dynamics AIR 2",
             "Pride of Indore - AIR 2 in Cost"
         ],
-        "img": img3
+        "img": "https://res.cloudinary.com/dlrp2o9dr/image/upload/v1742925838/audvik_mggihb.jpg"
     }
 
 

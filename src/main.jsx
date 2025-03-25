@@ -1,31 +1,32 @@
-  import React from 'react'
-  import ReactDOM from 'react-dom/client'
-  import App from './App.jsx'
-  import Aboutpage from './component/Aboutpage.jsx'
-  import './index.css'
-  import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-  import Home from './component/Home.jsx'
-  import Sponsorshippage from './component/Sponsorshippage.jsx'
-  import Contactus from './component/Contactus.jsx'
-  import Teampage from './component/Teampage.jsx'
+import React, { lazy, Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import EngineLoading from './component/Enginereving.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import './index.css';
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App/>,
-      children: [
-        {path: "/", element: <Home/>},
-        {path: "/aboutus", element: <Aboutpage/>},
-        {path: "/sponsorship", element: <Sponsorshippage/>},
-        {path: "/team", element: <Teampage/>}
-      
-      ]
-    },
-  
-  ]);
+// Lazy loading components
+const Home = lazy(() => import('./pages/Home.jsx'));
+const Aboutpage = lazy(() => import('./pages/Aboutpage.jsx'));
+const Sponsorshippage = lazy(() => import('./pages/Sponsorshippage.jsx'));
+const Teampage = lazy(() => import('./pages/Teampage.jsx'));
 
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    
-      <RouterProvider router={router}/>
-  
-  )
+// Fallback loader component
+const Loading = () => <div>Loading...</div>;
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { path: '/', element: <Suspense fallback={<EngineLoading />}><Home /></Suspense> },
+      { path: '/aboutus', element: <Suspense fallback={<EngineLoading />}><Aboutpage /></Suspense> },
+      { path: '/sponsorship', element: <Suspense fallback={<EngineLoading />}><Sponsorshippage /></Suspense> },
+      { path: '/team', element: <Suspense fallback={<EngineLoading />}><Teampage /></Suspense> }
+    ]
+  }
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+);
