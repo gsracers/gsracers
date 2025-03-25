@@ -13,8 +13,8 @@ export default function ContactForm() {
     e.preventDefault();
 
     const response = await emailjs
-    .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
-      publicKey: import.meta.env.VITE_PUBLIC_KEY,
+    .sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, {
+      publicKey: process.env.PUBLIC_KEY,
     })
     .then(
       () => {

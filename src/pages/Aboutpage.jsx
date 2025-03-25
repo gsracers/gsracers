@@ -1,29 +1,9 @@
 import React, { useEffect } from "react";
-import images from "../assets/logo-1.png";
 import "../index.css";
 import { motion } from "framer-motion";
-import Marqueecard from "../component/Marqueecard";
+
 import "@fontsource/exo-2";
 
-// Static image imports
-import image1 from "../assets/evolution/g1/g1_1.jpg";
-import image2 from "../assets/evolution/g2/g2_1.jpg";
-import image3 from "../assets/evolution/g3/g3_1.jpg";
-import image4 from "../assets/evolution/g4/g4_1.jpg";
-import image5 from "../assets/evolution/g5/g5_1.jpg";
-import image6 from "../assets/evolution/g6/g6_1.jpg";
-import image7 from "../assets/evolution/g7/g7_1.jpg";
-import image8 from "../assets/evolution/g8/g8_1.jpg";
-import image9 from "../assets/evolution/g9/g9_1.jpg";
-import image10 from "../assets/evolution/g10/g10_1.jpg";
-import image11 from "../assets/evolution/g11/g11_1.jpg";
-import image12 from "../assets/evolution/g12/g12_1.jpg";
-import image13 from "../assets/evolution/g13/g13_1.jpg";
-import image14 from "../assets/evolution/g14/g14_1.jpg";
-import image15 from "../assets/evolution/g15/g15_1.jpg";
-import image16 from "../assets/evolution/g16/g16_1.jpg";
-import image17 from "../assets/evolution/g17/g17_1.jpg";
-import image18 from "../assets/evolution/g18/g18_1.jpg";
 
 const aboutusimages = {
   img1: "https://res.cloudinary.com/dlrp2o9dr/image/upload/v1742907183/img2_hs3jlb.jpg",
