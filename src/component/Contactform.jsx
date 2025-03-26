@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser'
 import imagedata from "../utils/imagedataHome";
 
 import "../index.css";
@@ -14,27 +15,20 @@ export default function ContactForm() {
   
     const formData = new FormData(form.current);
   
-    try {
-      const response = await fetch("/api/sendemail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          phone: formData.get("phone"),
-          message: formData.get("message"),
-        }),
-      });
-  
-      const data = await response.json();
-      if (response.ok) {
-        toast.success("Email sent successfully!");
-      } else {
-        toast.error(`Failed: ${data.error}`);
-      }
-    } catch (error) {
-      toast.error("Something went wrong!");
-    }
+    emailjs
+    .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
+      publicKey: import.meta.env.VITE_PUBLIC_KEY,
+    })
+    .then(
+      () => {
+        toast.success('Message sent successfully!');
+        form.current.reset();
+      },
+      (error) => {
+        toast.error('Something went wrong!');
+        console.error(error);
+      },
+    );
   };
   
   return (
