@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef , useState} from 'react';
 import emailjs from '@emailjs/browser'
 import imagedata from "../utils/imagedataHome";
 
@@ -9,11 +9,19 @@ import { ExternalLink } from "lucide-react";
 
 
 export default function ContactForm() {
+  const [loading, setloading] = useState(false)
   const form = useRef();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setloading(true)
   
     const formData = new FormData(form.current);
+    let from =  Object.fromEntries(formData.entries());
+    if (!from.name || !from.email || !from.phone || !from.message) {
+      toast.error('Please fill in all fields!');
+      setloading(false)
+      return;
+    }
   
     emailjs
     .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
@@ -22,10 +30,12 @@ export default function ContactForm() {
     .then(
       () => {
         toast.success('Message sent successfully!');
+        setloading(false)
         form.current.reset();
       },
       (error) => {
         toast.error('Something went wrong!');
+        setloading(false)
         console.error(error);
       },
     );
@@ -107,7 +117,30 @@ export default function ContactForm() {
                     type="submit"
                     className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors duration-200"
                   >
-                    Submit
+                    {loading ? (
+                      <svg
+                        className="animate-spin h-5 w-5 mx-auto"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v8H4z"
+                        />
+                      </svg>
+                    ) : (
+                      "Submit"
+                    )}
                   </button>
                 </div>
               </form>
